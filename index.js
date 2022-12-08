@@ -40,29 +40,29 @@ class SortedList {
       }
   }
 
-  // sum() { 
-  //   if(!this.items.length){
-  //     return 0 }
-  //     else {
-  //       let sumValue = this.items.reduce((firstValue, currentValue)=> {firstValue + currentValue},0);
-  //       return sumValue
-  //     }
-  // }
-
   sum() { 
     if(!this.items.length){
       return 0 }
       else { 
-        let sum = 0;
-        for (let i=0; i<this.items.length; i++){
-          sum += this.items[i]
-
-        }
-        return sum
-        
-           
+        let sumValue = this.items.reduce((acc, cV) => acc + cV, 0);
+        return sumValue
       }
   }
+
+  // sum() { 
+  //   if(!this.items.length){
+  //     return 0 }
+  //     else { 
+  //       let sum = 0;
+  //       for (let i=0; i<this.items.length; i++){
+  //         sum += this.items[i]
+
+  //       }
+  //       return sum
+        
+           
+  //     }
+  // }
 
   avg() {
     if(!this.items.length){ throw new Error('EmptySortedList'); }
